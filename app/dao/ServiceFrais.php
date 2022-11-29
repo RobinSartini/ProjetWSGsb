@@ -11,7 +11,7 @@ namespace App\dao;
 use App\Exceptions\MonException;
 use Illuminate\Database\QueryException;
 use DB;
-use App\metier\FicheFrais;
+use App\metier\Frais;
 use App\metier\Etat;
 
 
@@ -55,7 +55,7 @@ class ServiceFrais
 
     /**
      * Liste des fiches frais selon le monant
-     * @return string|\listeFicheFrais : collection de FicheFrais
+     * @return string|\listeFicheFrais : collection de Frais
      **/
 
     public function getListeFicheFraisMontant($v1, $v2)
@@ -76,7 +76,7 @@ class ServiceFrais
 
     /**
      * Liste des fiches frais d'un visiteur
-     * @return string|\listeFicheFrais : collection de FicheFrais
+     * @return string|\listeFicheFrais : collection de Frais
      **/
 
     public static function getListeFicheFrais($idVisiteur)

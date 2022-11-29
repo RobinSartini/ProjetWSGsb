@@ -21,7 +21,7 @@ class Visiteur extends Model {
          'ville_visiteur',
          'date_embauche',
          'login_visiteur',
-         'password',
+         'pwd_visiteur',
          'type_visiteur'
    ];
 

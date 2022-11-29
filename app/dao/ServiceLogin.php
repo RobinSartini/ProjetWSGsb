@@ -13,7 +13,7 @@ use App\metier\Visiteur;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Hash;
 use DB;
-use App\metier\FicheFrais;
+use App\metier\Frais;
 use App\metier\Etat;
 
 class ServiceLogin
@@ -33,7 +33,7 @@ class ServiceLogin
                     ->where('login_visiteur',[$login_visiteur])
                     ->first();
                 if ($visiteur != null) {
-                    if (Hash::check($pwd_visiteur, $visiteur->password)) {
+                    if (Hash::check($pwd_visiteur, $visiteur->pwd_visiteur)) {
                         $response = $visiteur;
                     } else
                     $response =null;

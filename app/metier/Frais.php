@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\QueryException;
 use DB;
 
-class FicheFrais extends Model implements \JsonSerializable
+class Frais extends Model implements \JsonSerializable
 {
 
 //On déclare la table Fichefrais
-    protected $table = 'FicheFrais';
+    protected $table = 'frais';
     protected $fillable = [
         'id_frais',
         'anneeMois',
